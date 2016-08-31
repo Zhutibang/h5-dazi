@@ -10,11 +10,11 @@ $fontsize=300;
 $long =mb_strlen($text, 'utf-8');
 if($long < 7)
 {
-$fontsize=300;
-
+    $fontsize=300;
+    
 }else{
-
-$fontsize=220;
+    
+    $fontsize=220;
 }
 
 //$filename= $xuexiao.'.png';
@@ -31,9 +31,9 @@ imagedestroy($bg);
 $black = imagecolorallocate($im, 0, 0, 0);
 $font = './msyh.ttf';
 
-  $fontBox = imagettfbbox($fontsize, 0, $font, $text);
-  $x = ceil(($width - $fontBox[2]) / 2);
-  $y = 600; 
+$fontBox = imagettfbbox($fontsize, 0, $font, $text);
+$x = ceil(($width - $fontBox[2]) / 2);
+$y = 600;
 
 
 imagettftext($im, $fontsize, 0, $x, $y, $black, $font, $text);
